@@ -1,3 +1,4 @@
+/*
 #include <windows.h>
 #include <fstream>
 #include <vector>
@@ -150,4 +151,26 @@ int main() {
     }
 
     return 0;
+}
+*/
+
+#include <QApplication>
+#include <QSystemTrayIcon>
+#include <QMenu>
+#include <QAction>
+#include <QKeySequence>
+#include <QTimer>
+#include "tray_icon.h"
+#include "audio_recorder.h"
+
+int main(int argc, char *argv[]) {
+    QApplication app(argc, argv);
+
+    AudioRecorder recorder;
+    TrayIcon trayIcon;
+    trayIcon.setRecorder(&recorder);
+
+    QTimer::singleShot(0, &recorder, &AudioRecorder::startRecording);
+
+    return app.exec();
 }

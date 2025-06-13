@@ -48,5 +48,34 @@ InputEvent/
 Если у тебя установлен MinGW или любой другой компилятор:
 
 ```sh
-g++ main.cpp -o MacroRecorder.exe -mwindows
+g++ main.cpp -o InputEvent.exe -mwindows
 ```
+
+**Сборка проекта:**
+
+1. Установите Qt6 и CMake.
+
+2. Создайте директорию для сборки:
+
+   ```bash
+   mkdir build
+   cd build
+   ```
+
+3. Сгенерируйте файлы сборки:
+
+   ```bash
+   cmake ..
+   ```
+
+4. Соберите проект:
+
+   ```bash
+   cmake --build .
+   ```
+
+5. Запустите приложение:
+
+   ```bash
+   ./InputEvent
+   ```

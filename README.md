@@ -5,10 +5,14 @@
 ## ✅ Структура проекта
 
 ```
-UserMacroRecorder/
-├── main.cpp           // Основной исходный код
-├── actions.txt        // Файл с записанными действиями (создается автоматически)
-```
+InputEvent/
+├── CMakeLists.txt
+├── main.cpp                // Основной исходный код
+├── actions.txt             // Файл с записанными действиями (создается автоматически)
+├── tray_icon.h
+├── tray_icon.cpp
+└── audio_recorder.h
+└── audio_recorder.cpp
 
 ---
 
